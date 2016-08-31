@@ -1,0 +1,106 @@
+<html>
+  <head>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" media="screen" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+<!--    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../static/css/custom_nav.css" media="screen" />
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    </head>
+ <body id="body_element">
+<div id="nav_container" class="container-fluid">
+    <!-- Second navbar for categories -->
+
+    
+    <!-- Second navbar for search -->
+<div class="row"><div class="col-lg-12 col-md-12 navbar-custom">
+  
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">gif Zone</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-3">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="btn btn-default btn-outline btn-circle collapsed" id="signin-page" href="" aria-expanded="false">Sign In</a></li>
+
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed" id="search_button"  href="#" aria-expanded="false" >Register</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+      </div>
+      </div>
+    	
+</div>
+<div class="container-fluid" id="login_container_fluid">
+  
+    
+    <div class="row">
+      
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+      	<form class="form-horizontal" id="signup_form" action="/signup/" method="POST" enctype="multipart/form-data">
+			<fieldset>
+
+			<!-- Form Name -->
+				<legend id="login_legend">Sign Up</legend>
+
+				<!-- Text input-->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="textinput">Name : </label>  
+				  <div class="col-md-5">
+				  <input id="user_name" name="user_name" type="text" placeholder="Enter your name here..." class="form-control input-md" required>
+				  <span class="help-block">e.g Jhon</span>
+                  <span id="user_name_span" style="color:red"></span>
+				  </div>
+				</div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Eamil : </label>  
+          <div class="col-md-5">
+          <input id="email" name="email" type="text" placeholder="Enter your email here..." class="form-control input-md" required>
+          <span class="help-block">e.g abc@example.com</span>
+              <span id="alert_span" style="color:red"></span>
+          </div>
+        </div>
+				<!-- Password input-->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="passwordinput">Password : </label>
+				  <div class="col-md-5">
+				    <input id="password" name="password" type="password" placeholder="Enter your password here..." class="form-control input-md" required>
+				    <span id="password_span" style="color:red"></span>
+                      <button id="signup_button" name="singlebutton" class="btn btn-primary">Register</button>
+
+				  </div>
+
+				</div>
+
+	
+	
+
+			</fieldset>
+		</form>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="">
+      </div>            
+     </div>
+</div>
+<script src="../static/js/signup.js"></script>
+    </body>
+</html>    

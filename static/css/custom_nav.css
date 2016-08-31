@@ -1,0 +1,315 @@
+/*
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 220px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153);
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+    
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
+    }
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
+    }
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
+    }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    }
+}
+
+#nav_container{
+  padding-right: 0px;
+  padding-left: 0px;
+  
+}
+
+#content_div{
+  border-radius: 2px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+/*  float: right;*/
+  
+}
+
+.fixed{
+  position: fixed;
+  top:1px;
+}
+
+.jumbotron {
+    position: relative;
+    background: #000 url("img/react.png") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.navbar{
+  margin-bottom: 1px;
+}
+
+#menu_div{
+  padding-left: 15px;
+}
+
+.navbar-inverse .navbar-brand{
+  color:#eee;
+}
+.navbar-inverse{
+/*  background-color: #311110;*/
+  background-color: #054b7c;
+  border-color: #054b7c;
+  
+}
+
+.navbar.navbar-inverse .nav-collapse{
+  background-color: #054b7c;
+  border-color: #054b7c;
+}
+
+#signin{
+  color: white;
+}
+
+#search_button,#register-page,#signin-page{
+background-color: #337ab7;
+  border-color: #337ab7;
+  color: white;
+}
+#signout{
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: white;
+  border-radius: 50px;
+
+}
+.thumbnail{
+  border:4px solid #fefefe;
+  box-shadow:0 0 0 1px rgba(10,10,10,.2);
+  display:inline-block;
+  line-height:0;
+  max-width:100%;
+  transition:box-shadow .2s ease-out;
+  border-radius:0;
+  margin-bottom:1rem
+}
+.thumbnail:focus,.thumbnail:hover{
+  box-shadow:0 0 6px 1px rgba(33,153,232,.5)
+}
+.callout{
+  margin:0 0 1rem;
+  padding:1rem;
+  border:1px solid rgba(10,10,10,.25);
+  border-radius:0;
+  position:relative;
+  background-color:#fff;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.callout>:first-child{
+  margin-top:0;
+}
+.callout>:last-child{
+  margin-bottom:0;
+}
+.menu.simple a{
+  padding:0;
+  margin-right:1rem;
+}
+.menu>li{
+  display: table-cell;
+}
+.blog-post h3{
+  margin-top: 10px;
+  color: #337ab7;
+  font-weight:900;
+}
+.blog-post{
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px 2px #9d9d9d;
+}
+#upload_legend{
+  background-color: #337ab7;
+/*
+  padding-left: 2px;*/
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 42px;
+  text-align: center;
+  color: azure;
+  padding-top: 7px;
+  
+}
+#upload_div{
+  padding-left: 15px;
+  margin-left: 0px;
+}
+#upload_form{
+  background-color: white;
+/*  border-left: 1px solid #E3E0DF;*/
+}
+
+#menu-headings{
+  background-color: #337ab7;
+  color: azure;
+  font-size:21px;
+  height:42px;
+  padding-bottom: 10px;
+}
+body{
+  background-color: #eee;
+  font-family: Ubuntu;
+}
+.container-fluid{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+html,body{
+width: 100% !important;
+}
+.row{
+  margin: 0px;
+}
+
+.navbar-custom{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navbar{
+  border-radius: 2px;
+}
+
+.blog-post>img{
+  height: 400px;
+  width: 350px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+/*Login form styles*/
+#login_legend{
+  text-align: center;
+}
+#login_container_fluid{
+  margin-top: 40px;
+  
+}
+#login_form{
+background-color: white;
+border-radius: 3px;
+padding: 5px;
+border-radius: 5px;
+box-shadow: 1px 1px 3px 3px #337ab7;
+}
+#signup_form{
+background-color: white;
+border-radius: 3px;
+padding: 5px;
+border-radius: 5px;
+box-shadow: 1px 1px 3px 3px #337ab7;
+}
+
+#login_buttton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+#signup_button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;  
+}
+#alert_span, #success_span{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#delete-btn{
+    cursor: pointer;
+    color: #337ab7;
+}
+#edit-btn{
+    cursor: pointer;
+    color: #337ab7;
+    margin-left: 10px;
+}
+.edit-text-area{
+display:none;
+margin-left: 55px;
+margin-right: auto;
+}
+.edit_btns{
+    display:none;
+    margin-left: 5px;
+
+}
+.description_para{
+  padding-left: 55px;
+  padding-right: 55px;
+  word-wrap: break-word;
+}
+#gif{
+    width: 200px;
+}
+.no-result{
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+    background: white;
+    box-shadow: 1px 1px 2px 2px #9d9d9d;
+}
