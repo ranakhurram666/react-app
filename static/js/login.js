@@ -6,14 +6,15 @@ $("#login_form").on('submit',function(e){
     var email = $("#email").val();
     var password = $("#password").val();
 $.ajax({
-    url: "/login/",
+    url: "/login",
     type: 'GET',
     dataType:'json',
     data:{'email' : email, 'password':password} ,
     cache: false,
 
     success: function (data) {
-        if(data == true)
+        if(data=="error"){toastr.error("Database Error","Error"); $("#alert").text('');}
+        else if(data == true)
         {
             $("#alert").text('');
             var host = window.location.host;
@@ -22,6 +23,7 @@ $.ajax({
         }
         else {
             $("#alert").text('Invalid Username or Password.');
+
         }
     },
     error: function () {

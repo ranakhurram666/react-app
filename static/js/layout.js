@@ -113,7 +113,13 @@ $(document).on('click', '#edit-btn', function (){
         cache: false,
 
        success: function (data) {
-        if(data == true){
+
+       if(data=="error"){toastr.error("Database Error","Error");
+        $("#p-"+edit_image_id).show();
+        $("#desc-"+edit_image_id).hide();
+        $("#done-"+edit_image_id).hide();
+        $("#cancel-"+edit_image_id).hide();}
+        else if(data == true){
         $("#p-"+edit_image_id).text(description);
         $("#p-"+edit_image_id).show();
         $("#desc-"+edit_image_id).hide();
@@ -165,7 +171,9 @@ $(document).on('click', '#delete-btn', function (){
         cache: false,
 
         success: function (data) {
-        if(data.length > 0){
+
+        if(data=="error"){toastr.error("Database Error","Error");}
+        else if(data.length > 0){
 
         ReactDOM.render( < ContentList
                 data = {data} / >, document.getElementById('content_div')
@@ -204,7 +212,9 @@ $(".list-group-item").on('click',function(e){
         cache: false,
 
         success: function (data) {
-        if(data.length > 0){
+
+        if(data=="error"){toastr.error("Database Error","Error"); $("#content_div").html('<div class="no-result">No results found..</div>');}
+        else if(data.length > 0){
 
         ReactDOM.render( < ContentList
                 data = {data} / >, document.getElementById('content_div')
@@ -239,6 +249,8 @@ $("#search_form").on('submit',function(e) {
         cache: false,
 
         success: function (data) {
+        if(data=="error"){toastr.error("Database Error","Error"); $("#content_div").html('<div class="no-result">No results found..</div>');}
+
 if(data.length > 0){
 
         ReactDOM.render( < ContentList
@@ -309,17 +321,18 @@ $("#upload_form").on('submit',function(e){
             cache: false,
             contentType: false,
             success: function (data) {
-                $("#upload").prop('disabled', false);
-                console.log('Retrieving Data');
-                console.log(data);
+
+        if(data=="error"){toastr.error("Database Error","Error");}
+               else {$("#upload").prop('disabled', false);
+
                 ReactDOM.render( < ContentList
                 data = {data} / >, document.getElementById('content_div')
                 )
-                ;
+                ;}
         $("#gif").val('');
         $("#Description").val('');
         $("#alert_span").text('');
-        $("#success_span").text('Image Uploaded Successfully');
+       if(data!="error"){ $("#success_span").text('Image Uploaded Successfully');}
         $("#Image_Tag").val('');
         $("#url").val('');
         $("#Image_Title").val('');
@@ -345,7 +358,9 @@ $.ajax({
     cache: false,
     contentType: false,
     success:function(data){
-        if(data.length > 0){
+
+        if(data=="error"){toastr.error("Database Error","Error"); $("#content_div").html('<div class="no-result">No results found..</div>');}
+        else if(data.length > 0){
 
         ReactDOM.render( < ContentList
                 data = {data} / >, document.getElementById('content_div')

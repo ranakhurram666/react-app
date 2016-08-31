@@ -7,15 +7,15 @@ $("#email").on('change',function(){
     form_data.append('email',email);
     console.log(email);
     $.ajax({
-        url: "/email_availability/",
+        url: "/email_availability",
         type: 'GET',
         dataType:'json',
         data:{'email' : email} ,
         cache: false,
 
         success:function(data){
-            console.log(data);
-            if(data===true){
+            if(data=="error"){toastr.error("Database Error","Error"); $("#email").val('');}
+            else if(data===true){
 
                 $("#alert_span").text('Valid email.');
                 $("#alert_span").css('color', 'green');
@@ -68,7 +68,7 @@ This function is redirecting from signup page to login page when login button cl
 $("#signin-page").on('click',function(e){
     e.preventDefault();
     var host = window.location.host;
-    var location = "http://" + host + "/login";
+    var location = "http://" + host + "/redirect_to_login";
     window.location.replace(location);
 });
 //$("#signup_form").on('submit',function(){
